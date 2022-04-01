@@ -1,0 +1,28 @@
+{
+  "root": "apps/validation-e2e",
+  "sourceRoot": "apps/validation-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/validation-e2e/cypress.json",
+        "devServerTarget": "validation:serve:development"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "validation:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/validation-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["validation"]
+}

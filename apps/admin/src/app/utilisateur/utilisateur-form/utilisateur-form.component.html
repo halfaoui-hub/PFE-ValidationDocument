@@ -1,0 +1,88 @@
+<p-toast></p-toast>
+<div class="admin-page">
+    <p-card [header]="editmode ? 'Modifer Utilisateur': 'Ajouter Utilisateur'" subheader="Ajouter/Modifier utilisateur">
+        <div class="p-grid">
+            <div class="p-col-12">
+                <p-toolbar>
+                    <div class="p-toolbar-group-right"></div>
+                    <div class="p-toolbar-group-left">
+
+                        <p-button
+                         styleClass="p-button-primary mr-2"
+                         icon="pi pi-plus"
+                          [label]=" editmode ? 'Modifier' :'Créer'" 
+                          (onClick)="onSubmit()"
+                          >
+                        </p-button>
+
+                          <p-button
+                          styleClass="p-button-secondary "
+                          icon="pi pi-arrow-circle-left"
+                           label="Annuler" 
+                           >
+                        </p-button>
+                    </div>
+                </p-toolbar>
+            </div>
+            
+        </div>
+        <div class="p-grid">
+            <div class="p-col-12">
+                <form [formGroup]="form">
+                   
+                    <div class="card">
+                        <h5></h5>
+                        <div class="formgrid grid">
+                            <div class="field col-12 md:col-6">
+                                <label for="name">Nom</label>
+                                <input formControlName="name" id="name" type="text" class="inputfield w-full" pInputText>
+                                <small *ngIf="form.controls.name.invalid && isSubmitted" class="p-error">Nom est obligatoire </small>
+                            </div>
+
+                            <div class="field col-12 md:col-6">
+                                <label for="prenom">Prénom</label>
+                                <input formControlName="prenom" id="prenom" type="text" class="inputfield w-full" pInputText>
+                                <small *ngIf="form.controls.prenom.invalid && isSubmitted" class="p-error">prenom est obligatoire</small>
+                            </div>
+
+                            <div class="field col-12 md:col-6">
+                                <label for="password">Mot de passe</label>
+                                <input formControlName="password" id="password" type="password" class="inputfield w-full" pInputText>
+                                <small *ngIf="form.controls.password.invalid && isSubmitted" class="p-error">password est obligatoire </small>
+                            </div>
+
+                            <div class="field col-12 md:col-6">
+                                <label for="email">Email</label>
+                                <input formControlName="email" id="email" type="text" class="inputfield w-full" pInputText>
+                                <small *ngIf="form.controls.email.invalid && isSubmitted" class="p-error">Email est obligatoire </small>
+                            </div>
+
+                            
+                        
+                            <div class="field col-12 md:col-6">
+                                <label for="cin">Cin</label>
+                                <input formControlName="cin" id="cin" type="text" class="inputfield w-full" pInputText>
+                                <small *ngIf="form.controls.cin.invalid && isSubmitted" class="p-error">Cin est obligatoire </small>
+                            </div>
+
+                            <div class="field col-12 md:col-6">
+                                <label for="numeroTel">Numero télphone</label>
+                                <input formControlName="numeroTel" id="numeroTel" type="text" class="inputfield w-full" pInputText>
+                                <small *ngIf="form.controls.numeroTel.invalid && isSubmitted" class="p-error">Numero Tél est obligatoire </small>
+                            </div>
+                            
+                            <div class="field col-12 md:col-3">
+                                <label for="gender">Genre</label>
+                                <input formControlName="gender" id="gender" type="text" class="inputfield w-full" pInputText>
+                                <small *ngIf="form.controls.gender.invalid && isSubmitted" class="p-error">Genre est obligatoire </small>
+
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+       
+    </p-card>
+</div>
+

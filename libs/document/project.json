@@ -1,0 +1,26 @@
+{
+  "projectType": "library",
+  "root": "libs/document",
+  "sourceRoot": "libs/document/src",
+  "prefix": "bluebits",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/document"],
+      "options": {
+        "jestConfig": "libs/document/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/document/src/**/*.ts",
+          "libs/document/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

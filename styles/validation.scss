@@ -1,0 +1,38 @@
+
+
+//Base
+@import './base/color.scss';
+@import './base/font.scss';
+@import './base/mixins.scss';
+@import './base/configuration.scss';
+
+
+//include bootstrap
+//@import '~bootstrap/scss/bootstrap.scss';
+
+
+
+//library
+@import '..\node_modules\primeicons\primeicons.css';
+@import '..\node_modules\primeng\resources\themes/lara-light-blue\theme.css';
+@import '..\node_modules\primeng\resources\primeng.min.css';
+@import '..\node_modules\primeflex\primeflex.css';
+
+
+
+
+//Pages
+@import './apps/validation/pages/home-page.scss';
+@import './apps/validation/pages/document-list.scss';
+
+
+//Shared
+@import './apps/validation/shared/footer.scss';
+@import './apps/validation/shared/header.scss';
+
+//libs
+@import './libs/ui/banner.scss';
+@import './libs/ui/slider.scss';
+
+
+

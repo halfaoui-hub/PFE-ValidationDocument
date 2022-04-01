@@ -1,0 +1,26 @@
+{
+  "projectType": "library",
+  "root": "libs/cument",
+  "sourceRoot": "libs/cument/src",
+  "prefix": "bluebits",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/cument"],
+      "options": {
+        "jestConfig": "libs/cument/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/cument/src/**/*.ts",
+          "libs/cument/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

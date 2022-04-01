@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "projects": {
+    "admin": "apps/admin",
+    "admin-e2e": "apps/admin-e2e",
+    "cument": "libs/cument",
+    "doc": "libs/doc",
+    "document": "libs/document",
+    "ui": "libs/ui",
+    "utilisateur": "libs/utilisateur",
+    "validation": "apps/validation",
+    "validation-e2e": "apps/validation-e2e"
+    
+          
+  }
+}

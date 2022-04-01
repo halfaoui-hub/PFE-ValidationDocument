@@ -1,0 +1,89 @@
+
+<p-toast></p-toast>
+<div class="admin-page">
+    <p-card header='Comparer Document' subheader="Comparer Document">
+        <div class="p-grid">
+            <div class="p-col-12">
+                <p-toolbar>
+                    <div class="p-toolbar-group-right"></div>
+                    <div class="p-toolbar-group-left">
+
+                        <p-button
+                         styleClass="p-button-primary mr-2"
+                         icon="pi pi-plus"
+                          label= "Comparer" 
+                          (onClick)="onSubmit()"
+                          >
+                        </p-button>
+
+                          <p-button
+                          styleClass="p-button-secondary "
+                          icon="pi pi-arrow-circle-left"
+                           label="Annuler" 
+                           >
+                        </p-button>
+                    </div>
+                </p-toolbar>
+            </div>
+            
+        </div>
+        <div class="p-grid">
+            <div class="p-col-12">
+                <form  [formGroup]="form"  >
+                   
+                    <div class="card">
+                        <h5></h5>
+                        <div class="formgrid grid">
+                            <div class="field col-12 md:col-6">
+                                <label for="doc">Document Origine</label>
+                                
+                                <div>
+                                    <img [src]="imageDisplay1" alt="" style="width: 100%;">
+                                </div>
+                                
+                            </div>
+
+                            <div class="field col-12 md:col-6">
+                                <label for="name">Importer image</label>
+                                <input type="file" class="p-inputtext" accept="file/*" (change)="onImageUpload($event)" />
+                                <div>
+                                    <img [src]="imageDisplay" alt="" style="width: 100%;">
+                                </div>
+                                
+                                <!-- <label for="fichier">Document à Comparé</label>
+                                   <input type="file" (change)="onUpload($event)"> 
+                                   <button type="button" (click)="envoyer()"></button> -->
+                                <!-- <p-fileUpload name="demo[]" (onUpload)="onUpload($event)"
+                                multiple="multiple" accept="image/*" maxFileSize="1000000">
+                                <ng-template pTemplate="content">
+                                    <ul *ngIf="uploadedFiles.length">
+                                        <li *ngFor="let file of uploadedFiles">{{file.name}} - {{file.size}} bytes</li>
+                                    </ul>
+
+                                </ng-template>
+                                </p-fileUpload> -->
+
+                            </div>
+
+                   
+                    
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+       
+    </p-card>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+

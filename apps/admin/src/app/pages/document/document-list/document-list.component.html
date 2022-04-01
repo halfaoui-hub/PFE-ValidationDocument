@@ -1,0 +1,47 @@
+<p-toast></p-toast>
+<div class="admin-page">
+    <p-card header="Document" subheader="liste documents">
+        <div class="p-grid">
+            <div class="p-col-12">
+                <p-toolbar>
+                    <div class="p-toolbar-group-left">
+                        <p-button styleClass="p-button-success" icon="pi pi-plus" label="Niveau" routerLink="form"></p-button>
+                    </div>
+                </p-toolbar>
+            </div>
+            
+        </div>
+        <div class="p-grid">
+            <div class="p-col-12">
+                <p-table [value]="documents" styleClass="p-datatable-gridlines" [paginator]="true" [rows]="10">
+                    <ng-template pTemplate="header" responsiveLayout="scroll">
+                        <tr>
+                            
+                            <th pSortableColumn="doc">Document</th>
+                            <th pSortableColumn="commentaire">Commentaire</th>
+                            <th></th>
+                        </tr>
+                    </ng-template>
+                    <ng-template pTemplate="body" let-documents>
+                        <tr>
+
+                            <td><img [src]="documents.doc" style="width: 10%;" alt="" ></td>
+                            <td>{{ documents.commentaire }}</td>
+                            
+                           
+                            <td>
+                                <p-button (click)="deleteDocument(documents.id)" styleClass="p-button-error mr-2" icon="pi pi-trash"  ></p-button>
+                                <p-button (click)="EditDocument(documents.id)" styleClass="p-button-success mr-2" icon="pi pi-pencil" ></p-button>
+                                <p-button (click)="archiverDocument(documents.id,$event)" styleClass="p-button-success mr-2" icon="pi pi-wallet"  ></p-button>
+                                <p-button (click)="porterDocument(documents.id)"  styleClass="p-button-error" icon="pi pi-download" ></p-button>
+
+                            </td>
+                        </tr>
+                    </ng-template>
+                </p-table>
+            </div>
+        </div>
+    </p-card>
+</div>
+
+
